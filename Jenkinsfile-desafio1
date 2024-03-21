@@ -13,9 +13,6 @@ pipeline {
             steps {
                 script {
                     def passwordTemporal = sh 'openssl rand -base64 10'
-                    echo "Su contraseña es: ${passwordTemporal}"
-                    // 3. Persiste el password temporal para ser usado por el Operador y poder enviarlo por correo.
-                    env.PASSWORD_TEMPORAL = passwordTemporal
                 }
             }
         }
