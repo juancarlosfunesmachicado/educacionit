@@ -12,7 +12,7 @@ pipeline {
         stage('Generar password temporal') {
             steps {
                 script {
-                    def passwordTemporal = sh 'openssl rand -base64 10'
+                    def passwordTemporal = sh "openssl rand -base64 10"
                 }
             }
         }
