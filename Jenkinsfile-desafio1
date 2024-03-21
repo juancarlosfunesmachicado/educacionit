@@ -20,7 +20,7 @@ pipeline {
         stage('Crear usuario') {
             steps {
                 script {
-                    sh "sudo useradd -m -s /bin/bash -c ${params.NombreApellido} -G ${params.Departamento} ${params.Login} & sudo echo ${params.Login}:Temporal & sudo chpasswd"
+                    sh "sudo useradd -m -s /bin/bash -c ${params.NombreApellido} -G ${params.Departamento} ${params.Login} & sudo echo ${params.Login}:${passwordTemporal} & sudo chpasswd"
                 }
             }
         }
