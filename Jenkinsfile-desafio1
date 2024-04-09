@@ -6,7 +6,7 @@ pipeline {
         string(name: 'NombreApellido', description: 'Ingrese su Nombre y Apellido', defaultValue: '')
         choice(name: 'Departamento', choices: ['Contabilidad', 'Finanzas', 'Tecnología'], description: 'Escoja Departamento al que pertenece')
     }
-
+//prueba
     stages {
         // 2. Generar un password temporal
         stage('Generar password temporal') {
